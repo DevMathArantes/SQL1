@@ -1,0 +1,47 @@
+Consulta
+
+    O "select" seleciona colunas e "from" as tabelas, veja a sintaxe:
+
+        select X from Y;
+        X= colunas a serem mostradas
+        Y= tabela aonde se encontram as colunas
+
+    "*" serve para selecionar tudo, veja o exemplo:
+        
+        select * from Tabela;
+        (selecionou todas as colunas de Tabela)
+
+    Use "distinct" para trazer dados sem repeti-los, veja:
+
+        select distinct Nome from Pessoas;
+        (Assim teremos os diferentes nomes da tabela Pessoas sem repeti-los)
+
+Filtro
+
+    Após o comando de seleção, utilize "where" para adicionar condições de retorno, veja a sintaxe:
+        
+        select X from Y where Z;
+        (selecionou as colunas X na tabela Y que atendem a condição Z)
+
+        exemplos:
+
+            select * from Pessoas where nome = 'Fulano';
+            select * from Pessoas where idade > 18; 
+
+Ordenar
+
+    ...order by Y;
+    Após a seleção, o order by ordena pela coluna Y
+
+    Para inverter a ordem, adicione desc após o comando order by, veja o exemplo:
+
+    select * from Tabela where Id <> 0 order by Idade desc;
+
+    Neste exemplo, foram retornadas todas as colunas de "Tabela" que possuem Id diferente de 0, 
+    ordenadas em ordem decrescente pela idade (o order by é asc ou crescente por padrão)
+
+Apelidos 
+
+    select X as Y...
+    X poderá ser chamado como Y (a coluna não foi renomeada, é apenas um apelido)
+    obs: o "as" pode ser utilizado tanto em colunas quanto em tabelas
